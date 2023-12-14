@@ -106,7 +106,6 @@ ___TEMPLATE_PARAMETERS___
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
 // Enter your template code here.
-const log = require('logToConsole');
 const injectScript = require('injectScript');
 const setInWindow = require('setInWindow');
 const parseUrl = require('parseUrl');
@@ -131,8 +130,6 @@ else if(type === 'pixel') {
   sendPixel(pixelUrl);
 }
 
-
-log('data =', data);
 // Call data.gtmOnSuccess when the tag is finished.
 data.gtmOnSuccess();
 
@@ -140,27 +137,6 @@ data.gtmOnSuccess();
 ___WEB_PERMISSIONS___
 
 [
-  {
-    "instance": {
-      "key": {
-        "publicId": "logging",
-        "versionId": "1"
-      },
-      "param": [
-        {
-          "key": "environments",
-          "value": {
-            "type": 1,
-            "string": "debug"
-          }
-        }
-      ]
-    },
-    "clientAnnotations": {
-      "isEditedByUser": true
-    },
-    "isRequired": true
-  },
   {
     "instance": {
       "key": {
@@ -279,6 +255,5 @@ scenarios:
 
 ___NOTES___
 
-Created on 12/12/2023 20:57:36
-
+Created on 14/12/2023 09:48:08
 
