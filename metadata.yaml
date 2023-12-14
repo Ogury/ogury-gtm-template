@@ -1,5 +1,5 @@
 homepage: "https://ogury.com"
 documentation: "https://learn.ogury.com/ogury-pixel-integration-guide/"
 versions:
-  - sha: TODO
+  - sha: 1da4d22a43872a3265c7b0f243998322ce3377c1
     changeNotes: Initial release.
