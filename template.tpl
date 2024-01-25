@@ -119,14 +119,14 @@ const host = parseUrl(full_url).host || parseUrl(full_url).hostname;
 const type = data.type;
 
 if(type === 'js') {
-  const jsUrl = 'https://ads-engagement.presage.io/script?site=' + encodeUriComponent(host) + '&full_url=' + encodeUriComponent(full_url);
+  const jsUrl = 'https://ads-engagement.presage.io/script?site=' + encodeUriComponent(host) + '&full_url=' + encodeUriComponent(full_url) + '&src=gtm';
   injectScript(jsUrl, data.gtmOnSuccess, data.gtmOnFailure, jsUrl);
 } 
 else if(type === 'pixel') {
   let event = data.custom || data.event;
   let identifier = data.identifier;
   
-  const pixelUrl = 'https://ads-engagement.presage.io/pixel?site=' + encodeUriComponent(host) + '&e=' + encodeUriComponent(event) + (identifier ? ('&id='+ encodeUriComponent(identifier)) : '') + '&full_url=' + encodeUriComponent(full_url);
+  const pixelUrl = 'https://ads-engagement.presage.io/pixel?site=' + encodeUriComponent(host) + '&e=' + encodeUriComponent(event) + (identifier ? ('&id='+ encodeUriComponent(identifier)) : '') + '&full_url=' + encodeUriComponent(full_url) + '&src=gtm';
   sendPixel(pixelUrl);
 }
 
