@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ogury-gtm-template
+  title: ogury-gtm-template
+  description: Ogury template for Google Tag Manager to easily integrate the Ogury Post Click Trackers
+  annotations:
+    github.com/project-slug: Ogury/ogury-gtm-template
+    jenkins.io/job-full-name: Ogury/ogury-gtm-template
+    sonarqube.org/project-key: Ogury_ogury-gtm-template
+  tags:
+    - nodejs
+    - javascript
+  links:
+    - url: https://github.com/Ogury/ogury-gtm-template/blob/master/README.md
+      title: README
+spec:
+  type: library
+  owner: group:default/webexperience
+  lifecycle: production
